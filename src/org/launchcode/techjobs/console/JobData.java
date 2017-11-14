@@ -89,15 +89,15 @@ public class JobData {
         loadData();
         ArrayList<HashMap<String,String>> jobs = new ArrayList<>();
 
-        for (HashMap<String, String> job : allJobs)
+        for (HashMap<String, String> row : allJobs)
         {
-            String search = value;
-            for(Map.Entry<String, String> key : job.entrySet())
+            for(String key : row.keySet())
             {
-                String jobKey = key.getKey();
-                if (job.containsKey(search))
+                String aValue = row.get(key);
+                if (aValue.contains(value))
                 {
-                    jobs.add(job);
+                    jobs.add(row);
+                    break;
                 }
             }
 

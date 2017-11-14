@@ -126,11 +126,9 @@ public class TechJobs {
             for (Map.Entry<String, String> jobColumn : job.entrySet())
             {
                 jobInfo += jobColumn.getKey() + ":" + jobColumn.getValue() + "\n";
-                System.out.println(jobInfo + "*********\n");
-
             }
 
-
+            System.out.println(jobInfo + "*********\n");
         }
 
         //System.out.println("printJobs is not implemented yet");
